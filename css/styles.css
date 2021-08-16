@@ -35,8 +35,8 @@
   --gap: 30px;
 
   /* Задержки анимации */
-  --btn-timing: 250ms;
-  --modal-timing: 500ms;
+  --btn-timing: 1250ms;
+  --modal-timing: 1500ms;
 }
 
 body {
@@ -289,7 +289,7 @@ img {
 }
 
 /* Hero Button */
-.section-hero .button {
+.section-hero-button {
   background-color: var(--accent-color);
   color: var(--active-button-text-color);
 
@@ -303,11 +303,12 @@ img {
 
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
-  transition: color var(--btn-timing) cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--btn-timing) cubic-bezier(0.4, 0, 0.2, 1),
+    background-color var(--btn-timing) cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.section-hero .button:hover,
-.section-hero .button:focus {
+.section-hero-button:hover,
+.section-hero-button:focus {
   background-color: var(--accent-color-hover-hero-button);
 }
 
