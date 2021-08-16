@@ -35,16 +35,14 @@
   --gap: 30px;
 
   /* Задержки анимации */
-  --btn-timing: 2250ms;
-  --modal-timing: 1500ms;
+  --btn-timing: 250ms;
+  --modal-timing: 500ms;
 }
 
 body {
   background-color: var(--primary-bg-color);
   color: var(--primary-text-color);
-
   font-family: "Roboto", sans-serif;
-
   letter-spacing: 0.03em;
 }
 
@@ -102,7 +100,6 @@ img {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
-
   color: var(--alt-text-color);
 }
 
@@ -127,13 +124,11 @@ img {
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
-  /* outline: 2px solid tomato; */
 }
 
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
-  /* outline: 2px solid yellowgreen; */
 }
 
 /* ================= Header ================ */
@@ -180,12 +175,11 @@ img {
 
 /* Logo Header*/
 .logo {
-  color: var(--logo-header-color);
-
   font-family: Raleway;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.17;
+  color: var(--logo-header-color);
 }
 .logo .accent {
   color: var(--accent-color);
@@ -193,17 +187,17 @@ img {
 
 /* Header Navigation */
 .site-nav .link {
-  color: var(--alt-text-color);
-
   font-weight: 500;
   font-size: 14px;
   line-height: 1.17;
   letter-spacing: 0.02em;
+  color: var(--alt-text-color);
 
   display: block;
 
   padding-top: 32px;
   padding-bottom: 32px;
+
   position: relative;
   transition: color var(--btn-timing) cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -216,7 +210,7 @@ img {
 .site-nav .link.current {
   color: var(--accent-color);
 }
-
+/* Подчёркивание ссылки текущей страницы */
 .site-nav .link.current::after {
   content: "";
   display: block;
@@ -229,14 +223,13 @@ img {
 
 /* Header Contacts */
 .header-contact-link {
-  color: var(--primary-text-color);
-
   font-weight: 500;
   font-size: 14px;
   line-height: 1.17;
   letter-spacing: 0.02em;
-
-  /* Расставляем в ряд иконки с текстом внутри блоков "header-contact" */
+  color: var(--primary-text-color);
+  /* Расставляем в ряд иконки с текстом внутри блоков "header-contact" и
+     выравниваем по высоте */
   display: flex;
   align-items: center;
 
@@ -276,11 +269,11 @@ img {
 }
 
 .hero-title {
-  color: var(--hero-text-color);
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
   letter-spacing: 0.06em;
+  color: var(--hero-text-color);
 
   text-transform: uppercase;
 
@@ -290,13 +283,12 @@ img {
 
 /* Hero Button */
 .section-hero-button {
-  background-color: var(--accent-color);
-  color: var(--active-button-text-color);
-
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.06em;
+  background-color: var(--accent-color);
+  color: var(--active-button-text-color);
 
   /* геометрия кнопки HERO */
   padding: 10px 32px; /* защита от прижимания к границам при переполнении */
