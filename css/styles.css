@@ -220,7 +220,6 @@ img {
   position: absolute;
   bottom: 0;
   height: 4px;
-  margin-top: 27px;
   background-color: var(--accent-color);
 }
 
