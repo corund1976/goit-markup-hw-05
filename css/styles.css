@@ -33,6 +33,10 @@
 
   /* Расстояние между элементами в сетке */
   --gap: 30px;
+
+  /* Задержки анимации */
+  --btn-timing: 250ms;
+  --modal-timing: 500ms;
 }
 
 body {
@@ -201,7 +205,7 @@ img {
   padding-top: 32px;
   padding-bottom: 32px;
   position: relative;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--btn-timing) cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .site-nav .link:hover,
@@ -236,7 +240,7 @@ img {
   display: flex;
   align-items: center;
 
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--btn-timing) cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-contact-link:hover,
@@ -299,7 +303,7 @@ img {
 
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--btn-timing) cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .section-hero .button:hover,
@@ -505,7 +509,7 @@ img {
   height: 44px;
   border-radius: 50%;
 
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color var(--btn-timing) cubic-bezier(0.4, 0, 0.2, 1);
 
   /* background-color: rgba(255, 255, 255, 0.1); */
 }
@@ -555,7 +559,8 @@ img {
 .client-item-link {
   fill: var(--client-color);
 
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border var(--btn-timing) cubic-bezier(0.4, 0, 0.2, 1),
+    fill var(--btn-timing) cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .client-item-link:hover,
@@ -601,7 +606,7 @@ img {
   font-size: 14px;
   line-height: 1.71;
 
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--btn-timing) cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-contact .link-dark {
@@ -650,7 +655,7 @@ img {
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
 
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color var(--btn-timing) cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-social-icon {
@@ -674,7 +679,9 @@ img {
 
   padding: 6px 22px;
 
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--btn-timing) cubic-bezier(0.4, 0, 0.2, 1),
+    background-color var(--btn-timing) cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow var(--btn-timing) cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-filter-button:hover,
@@ -738,7 +745,7 @@ img {
 .project-card-link {
   display: block;
 
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow var(--btn-timing) cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .project-card-link:hover,
@@ -761,7 +768,7 @@ img {
   height: 100%;
   /* overflow: auto; */
   transform: translateY(100%);
-  transition: transform 500ms linear;
+  transition: transform var(--modal-timing) linear;
 }
 
 .project-card-wrapper {
@@ -788,7 +795,8 @@ img {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
-  transition: opacity 500ms linear, visibility 500ms linear;
+  transition: opacity var(--modal-timing) linear,
+    visibility var(--modal-timing) linear;
 }
 
 .backdrop.is-hidden {
